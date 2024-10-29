@@ -8,3 +8,9 @@ spec:
       containers:
         - name: nginx
           image: nginx:latest
+          env:
+            - name: SECRET_VALUE
+              valueFrom:
+                secretKeyRef:
+                  name: nginx-secret-uat
+                  key: SECRET_VALUE

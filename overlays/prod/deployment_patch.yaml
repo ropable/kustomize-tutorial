@@ -13,3 +13,9 @@ spec:
             requests:
               cpu: 5m
               memory: 64Mi
+          env:
+            - name: SECRET_VALUE
+              valueFrom:
+                secretKeyRef:
+                  name: nginx-secret-prod
+                  key: SECRET_VALUE

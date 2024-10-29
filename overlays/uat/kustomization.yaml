@@ -9,3 +9,10 @@ labels:
   - includeSelectors: true
     pairs:
       variant: uat
+secretGenerator:
+  - name: nginx-secret
+    type: Opaque
+    envs:
+      - .env
+generatorOptions:
+  disableNameSuffixHash: true
