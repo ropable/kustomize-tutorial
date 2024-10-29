@@ -11,6 +11,11 @@ spec:
       labels:
         app: nginx
     spec:
+      restartPolicy: Always
       containers:
         - name: nginx
           image: nginx:stable
+          imagePullPolicy: Always
+          env:
+            - name: TZ
+              value: "Australia/Perth"
