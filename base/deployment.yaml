@@ -3,13 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
-  selector:
-    matchLabels:
-      app: nginx
   template:
-    metadata:
-      labels:
-        app: nginx
     spec:
       restartPolicy: Always
       containers:

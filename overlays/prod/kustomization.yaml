@@ -5,3 +5,7 @@ resources:
 patches:
   - path: deployment_patch.yaml
 nameSuffix: -prod
+labels:
+  - includeSelectors: true
+    pairs:
+      variant: prod
